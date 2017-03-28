@@ -26,11 +26,13 @@ packages:
   type: app-broker
   label: PagerDuty Broker
   manifest:
-    path: resources/pagerduty-broker/main.go
+    path: resources/app.zip
     buildpack: go_buildpack
     env:
-      GOPACKAGENAME: pagerduty-broker/vendor
+      GOPACKAGENAME: main
       BROKER_CONFIG_PATH: config.yml
+      SECURITY_USER_NAME: admin
+      SECURITY_USER_PASSWORD: pagerduty
 
 # Include stemcell criteria if you don't want to accept the default.
 # Since this stemcell is only used to run pre and post errands, we
