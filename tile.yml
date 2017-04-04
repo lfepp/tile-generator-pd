@@ -31,18 +31,18 @@ packages:
     env:
       GOPACKAGENAME: main
       BROKER_CONFIG_PATH: config.yml
-      SECURITY_USER_NAME: admin
-      SECURITY_USER_PASSWORD: pagerduty
 
 # Include stemcell criteria if you don't want to accept the default.
 # Since this stemcell is only used to run pre and post errands, we
 # strongly recommend you leave this alone so that your tile always
 # runs with the latest stemcell.
 #
-# stemcell_criteria:
-#   os: ubuntu-trusty
-#   requires_cpi: false
-#   version: '3312'
+stemcell_criteria:
+  os: ubuntu-trusty
+  requires_cpi: false
+  version: '3312'
+org: 'org-1'
+space: 'space-1'
 
 # Add properties you want to pass to your applications.
 # Properties specified here will not be configurable by the user.
@@ -59,17 +59,19 @@ packages:
 # applications as environment variables. You can also refer to them
 # elsewhere in this template by using:
 #     (( .properties.<property-name> ))
-#
+# #
 # forms:
-# - name: buildpack_properties
-#   label: Buildpack
-#   description: Buildpack_properties
+# - name: broker-credentials
+#   label: Broker Credentials
+#   description: Authentication credentials for your PagerDuty service broker
 #   properties:
-#   - name: buildpack_rank
-#     type: integer
-#     default: 0
-#     label: Buildpack rank for this buildpack_rank
-#     description: Ranking of this buildpack relative to others
+#   - name: security_user_name
+#     type: string
+#     label: Username
+#   - name: security_user_password
+#     type: secret
+#     label: Password
+
 
 # Add any dependencies your tile has on other installed products.
 # This is often appropriate when using automatic service provisioning
