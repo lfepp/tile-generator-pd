@@ -37,12 +37,12 @@ packages:
 # strongly recommend you leave this alone so that your tile always
 # runs with the latest stemcell.
 #
-stemcell_criteria:
-  os: ubuntu-trusty
-  requires_cpi: false
-  version: '3312'
-org: 'org-1'
-space: 'space-1'
+# stemcell_criteria:
+#   os: ubuntu-trusty
+#   requires_cpi: false
+#   version: '3312'
+# org: 'org-1'
+# space: 'space-1'
 
 # Add properties you want to pass to your applications.
 # Properties specified here will not be configurable by the user.
